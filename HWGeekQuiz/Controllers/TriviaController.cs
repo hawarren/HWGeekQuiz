@@ -50,7 +50,7 @@ namespace HWGeekQuiz.Controllers
 
         //
         // GET api/TriviaAdd the following Get action method to the TriviaController class. This action method calls the NextQuestionAsync helper method defined in the previous step to retrieve the next question for the authenticated user.
-        [ResponseType((typeof(TriviaQuestion))]
+        [ResponseType((typeof(TriviaQuestion)))]
    public async Task<IHttpActionResult> Get()
     {
         var userId = User.Identity.Name;
@@ -81,7 +81,7 @@ namespace HWGeekQuiz.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return this.BadRequest((this.ModelState);
+                return this.BadRequest(this.ModelState);
             }
 
             answer.UserId = User.Identity.Name;
